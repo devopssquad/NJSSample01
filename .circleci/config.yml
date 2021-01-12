@@ -49,6 +49,6 @@ jobs:
       - run:
           name: Build and Deploy
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            if [ "${CIRCLE_BRANCH}" == "circleci-project-setup" ]; then
               ./deployment.sh
             fi  
