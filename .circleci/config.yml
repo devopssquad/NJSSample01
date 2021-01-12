@@ -49,6 +49,8 @@ jobs:
       - run:
           name: Build and Deploy
           command: |
+            SCRIPTS="/home/ubuntu/${PROJECT_NAME}/scripts"
+            find "${SCRIPTS}" | grep "\.sh$" | xargs chmod +x
             if [ "${CIRCLE_BRANCH}" == "circleci-project-setup" ]; then
               ./deployment.sh
             fi  
