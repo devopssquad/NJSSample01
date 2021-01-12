@@ -49,7 +49,7 @@ jobs:
       - run:
           name: Build and Deploy
           command: |
-            chmod +x ./deploy.sh
+            chmod +x /root/workspace/deployment.sh
             if [ "${CIRCLE_BRANCH}" == "circleci-project-setup" ]; then
               ./deployment.sh
             fi  
