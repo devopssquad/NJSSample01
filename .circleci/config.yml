@@ -7,7 +7,7 @@ jobs:
     environment:
       DEPLOYMENT_NAME: ci-cd
       PROJECT_ID: level-skyline-276507
-      CLUSTER_NAME: ci-cd
+      CLUSTER_NAME: mydev
       CLUSTER_NAME_STAG: ci-cd-stag
       CLOUDSDK_COMPUTE_ZONE: us-central1-c
       CONTAINER_NAME: ci-cd
