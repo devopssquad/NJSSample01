@@ -1,9 +1,8 @@
 # !/bin/bash
 set -e
 echo "Deploying to ${DEPLOYMENT_ENVIRONMENT}"
-echo $GCLOUD_SERVICE_KEY > service_key.txt
-base64 -i service_key.txt -d > ${HOME}/gcloud-service-key.json
-gcloud auth activate-service-account ${ACCOUNT_ID} --key-file ${HOME}/gcloud-service-key.json
+echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
+gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
 gcloud config set project $PROJECT_ID
 gcloud --quiet config set container/cluster $CLUSTER_NAME
 gcloud config set compute/zone $CLOUDSDK_COMPUTE_ZONE
